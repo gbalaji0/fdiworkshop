@@ -7,12 +7,16 @@
 1. Navigate to Amazon Athena [in the console](https://console.aws.amazon.com/athena)
 
 1. Setup your query result location to a folder within your S3 bucket
+
 1. Click on **Settings**
-1. Update S3 location to  s3://<your_bucket>/athena/results (E.g. s3://mod-da6d820750784dd7-simplebucket-1jeg10o4329yx/athena/results/
+
+1. Create  */athena/results/* folder in your S3 bucket to be able to save the settings
+
+1. Update S3 location to  s3://&lt;your_bucket&gt;/athena/results/ (E.g. s3://mod-da6d820750784dd7-simplebucket-1jeg10o4329yx/athena/results/
 
   ![Record count](assets/AthenaSettingsForResults.png)
 
-Note: You may have to create the _/athena/results_ folder in your S3 bucket to be able to save the settings
+Note: There should be a slash('/') at the end of the location
 
 ### Step 2: Run SQL Queries against raw files!
 

@@ -2,8 +2,6 @@
 
 As part of Financial Data Innovation workshop, participants will use familiar datasets, and AWS tools to speed up data ingestion, data analytics, and gain insights from the data.
 
-_**add more contents._
-
 _Time Commitment Expectations: This workshop was created to be completed in approximately 2 hours._
 
 ## Considerations for Each Role
@@ -19,17 +17,11 @@ At minimum, at the end of this workshop, you should be successfully ingest data,
 
 ## Solution Architecture
 
-Customers can search for and subscribe data from AWS Data Exchange, or have the data delivered to their S3 bucket. AWS Glue can then maintain the data catalog. The raw data then becomes queryable through Amazon Athena. Amazon QuickSight can be used for Visualization. In order to complex analytics and periodic reporting, customers can use Amazon Redshift. The Redshift spectrum feature lets join data between the data warehouse and the data lake (S3). Amazon QuickSight also has Machine Learning insights built into it. More Machine learning can be done using Amazon Sagemaker. Customers across the organization can realize value from their data assets. Even without ML skills, personnel can use advanced AI tools such as Amazon Translate and Amazon Comprehend to translate and do sentiment analysis on data. Developers can also easily integrate these higher order services.
+Customers can search for and subscribe to data using AWS Data Exchange. Data can be delivered directly to their S3 bucket. AWS Glue can then maintain the data catalog. The raw data then becomes queryable through Amazon Athena. Amazon QuickSight can be used for Visualization. In order to perform complex analytics and periodic reporting, customers can use Amazon Redshift. The Redshift spectrum feature lets join data between the data warehouse (Redshift) and the data lake (S3). Amazon QuickSight also has Machine Learning insights built into it. More Machine learning can be done using Amazon Sagemaker. Customers across the organization can realize value from their data assets. Even without ML skills, personnel can use advanced AI tools such as Amazon Translate and Amazon Comprehend to translate and do sentiment analysis on data. Developers can also easily integrate these higher order services.
 
 ![Architecture diagram](assets/FDIArchitecture.png)
 
-## Prerequisites
-
-Provide a list of prerequisites that are required to successfully complete your workshop. This should include setting up an AWS account (note if you support multiple students sharing a single account), installing and configuring the CLI, and setting up any other tools students may need. Additionally, if there are specific skills or technologies students need to have existing knowledge of, you should list those here.
-
-Add a subsection for each prerequisite.
-
-Supported regions:
+## Supported regions:
 * us-east-1 (N. Virginia)
 * us-east-2 (Ohio)
 * us-west-2 (Oregon)
