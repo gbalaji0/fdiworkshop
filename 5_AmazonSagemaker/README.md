@@ -45,21 +45,31 @@
 ### Step 3: Navigate through Jupyter notebook and execute the ML steps
 
 1. In the code under the Jupyter notebook, update the **input_bucket** variable to the S3 bucket where the **tsla.csv** file exists.
+    <details>
+    <summary><strong>Expand if you want detailed directions</strong></summary><p>
 
-<details>
-<summary><strong>Expand if you want detailed directions</strong></summary><p>
+    Check the data contents in S3 by following these steps:
 
-Check the data contents in S3 by following these steps:
+    1. Navigate to Amazon S3 [in the console](https://console.aws.amazon.com/s3)
+    1. Click on the **mod-...-simplebucket-...** bucket
+    1. Copy the name
+    </p></details>
 
-1. Navigate to Amazon S3 [in the console](https://console.aws.amazon.com/s3)
-1. Click on the **mod-...-simplebucket-...** bucket
-1. Copy the name
+ 2. Run through the Jupyter notebook steps - which includes visualizing the data, using DeepAR model, training the model, predicting and writing back the predicted results back on to S3.
 
-</p></details>
+### Step 4: AWS Glue and Amazon QuickSight visualization of Predicted results
 
-1. Run through the Jupyter notebook steps - which includes visualizing the data, using DeepAR model, training the model, predicting and writing back the predicted results back on to S3.
+1. After running **DeepAR** model, the script writes the predicted values to the same S3 bucket, but under a different folder (data/predicted).
 
-  ![Image](assets/QSSelectLineChart.png)
+1. Use AWS Glue crawler to generate the catalog.
+
+1. In AWS Glue, edit the schema and update the “time” field to “timestamp” type (by default crawler assumes it as a “string”)
+
+  ![Image](assets/SMPricePredictedTimeDataType.png)
+
+1. In Amazon QuickSight, create an Athena dataset and visualize using a line chart. Use the “time” field on X-axis, and plot Max(Price), Max(10thPercentile), Max(90thPercentile)
+
+  ![Image](assets/QuickSightPredictedView.png)
 
 ## Next step:
 
