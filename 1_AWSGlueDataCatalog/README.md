@@ -60,16 +60,16 @@ In this step, we will use the catalog script that was provided along with the da
 
 ### Step 3: Verify creation of data catalog
 
-1. In AWS Glue, go to **Tables**  
+1. In AWS Glue, go to **Tables**, you should notice the table **bbg**  
 ![Glue table schema in marketdata database](assets/GlueTableSchemaInMarketDataDB.png)
 
-1. Click on **bbg** and check the catalog (S3 location + schema).
+1. Click on **bbg**, you should notice the catalog (S3 location + schema).
 ![Inspect data catalog](assets/GlueInspectDataCatalog.png)
 
 ### Step 4: Cross check against S3 location
 
-1. Click on the highlighted S3 **Location** to make sure it is taking to the right S3 bucket where the data resides.
-![Inspect data catalog](assets/ConfirmS3Location.png)
+1. Click on the highlighted S3 **Location** to make sure it is pointing to the right S3 folder where the data (.gz files) resides, as below.
+![Verify S3 location](assets/ConfirmS3Location.png)
 
 ## Next step:
 
