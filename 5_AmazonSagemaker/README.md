@@ -65,11 +65,11 @@
 
 1. In AWS Glue, edit the schema and update the “time” field to “timestamp” type (by default crawler assumes it as a “string”)
 
-  ![Image](assets/SMPricePredictedTimeDataType.png)
+    ![Image](assets/SMPricePredictedTimeDataType.png)
 
 1. In Amazon QuickSight, create an Athena dataset and visualize using a line chart. Use the “time” field on X-axis, and plot Max(Price), Max(10thPercentile), Max(90thPercentile)
 
-  ![Image](assets/QuickSightPredictedView.png)
+    ![Image](assets/QuickSightPredictedView.png)
 
 ## Next step:
 
