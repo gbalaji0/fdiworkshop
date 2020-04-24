@@ -47,7 +47,7 @@ Note*: You can ignore the IAM warnings from QuickSight
   select * from "marketdata"."bbg" where ticker is not null
   ```
 
-    ![QuickSight CustomSQL](assets/QSCustomSQL.png)
+  ![QuickSight CustomSQL](assets/QSCustomSQL.png)
 
 1. Click on **Confirm Query**
 
