@@ -70,7 +70,7 @@
 
 1. In Amazon QuickSight, create an Athena dataset and visualize using a line chart. Use the “time” field on X-axis, and plot Max(Price), Max(10thPercentile), Max(90thPercentile)
 
-    ![Image](QuickSight Predicted view/QuickSightPredictedView.png)
+    ![QuickSight Predicted view](assets/QuickSightPredictedView.png)
 
 ## Next step:
 
