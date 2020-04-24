@@ -30,7 +30,7 @@ Note: There should be a slash('/') at the end of the location
   ```
   ![Record count](assets/AthenaCountQuery.png)
 
-1. Run query to inspect table content
+4. Run query to inspect table content
   ```
   select * from "marketdata"."bbg" where ticker is not null limit 10;
   ```
