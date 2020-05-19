@@ -1,5 +1,6 @@
 # Perform Complex Analytics and Periodic Reporting using Amazon Redshift
-**Optional** - to skip [click here to move on to next step](#next-step:)
+**Optional** - to skip [click here to move on to next step](#next-step)
+
 **Time to complete:** 30-45 minutes.
 
 ### Step 1: Setup Amazon Redshift
