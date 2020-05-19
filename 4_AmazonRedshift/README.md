@@ -141,7 +141,7 @@ You have now successfully setup VPC endpoint for S3
       1.	Inspect the catalog by double clicking on the name.
       ![Inspect Industry table in catalog](assets/SpectrumIndustryTableInCatalog.png)
 
-    1.	Link external schema to glue data catalog
+   1.	Link external schema to glue data catalog
       In Redshift Query Editor, run the following commands.
       ```
       create external schema spectrum_schema from data catalog
@@ -157,7 +157,7 @@ You have now successfully setup VPC endpoint for S3
 
       </p></details>
 
-    1.	Illustrate Redshift Spectrum Join
+   1.	Illustrate Redshift Spectrum Join
     In Redshift in Query Editor, run following Query. It joins “bbg” data in Redshift with “industry” data in S3.
     ```
     select b.sector, count(a.ticker) as numInSector, sum(a.px_volume) as totVolbySector
