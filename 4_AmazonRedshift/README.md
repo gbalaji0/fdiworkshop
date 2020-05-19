@@ -103,6 +103,7 @@ You have now successfully setup VPC endpoint for S3
   Click on _Query Editor_ and select _public_ in Schema and make sure table, **bbg** appears in the table list.
 
   1. Verify the content by running sample query such as the follows
+
   `select * from public.bbg limit 10`
 
   #### Step 6a: Redshift Spectrum
