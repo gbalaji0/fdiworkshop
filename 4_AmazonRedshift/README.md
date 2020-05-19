@@ -50,6 +50,7 @@ You have now successfully setup VPC endpoint for S3
   1. For **Type** select "Redshift"
 
   1. For **Source**, specify the QuickSight CIDR range. The source address for QuickSight can be got from [QuickSight Regions, and IP Ranges](https://docs.aws.amazon.com/quicksight/latest/user/regions.html)
+
   <details>
   <summary><strong>Expand if you want detailed directions</strong></summary><p>
 
@@ -58,9 +59,10 @@ You have now successfully setup VPC endpoint for S3
     1. Find the **IP address range** and copy the corresponding value (E.g., _52.23.63.224/27_)
 
     This is the QuickSight CIDR range needed to be configured in the Security Group setting.
+
   </p></details><br/>
 
-  1. Click on **Save rules** to update Security Group rules to allow QuickSight access the Redshift port.
+  7. Click on **Save rules** to update Security Group rules to allow QuickSight access the Redshift port.
   ![Security Groups inbound rules](assets/VPCAddInboundRulesForQS.png)
 
 ### Step 4: In AWS Glue, check connection to Redshift
