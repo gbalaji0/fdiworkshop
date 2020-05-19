@@ -106,8 +106,8 @@ You have now successfully setup VPC endpoint for S3
 
   `select * from public.bbg limit 10`
 
-  #### Step 6a: Redshift Spectrum
-    1. Create Glue crawler for _industry_ data
+   ##### Step 6a: Redshift Spectrum
+   1. Create Glue crawler for _industry_ data
       1. In AWS Glue, select the Crawlers tab on the left pane and click on “Add crawler”
       ![Glue Add Crawler](assets/IndustryAddCrawler.png)
 
