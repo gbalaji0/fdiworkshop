@@ -50,15 +50,15 @@ You have now successfully setup VPC endpoint for S3
   1. For **Type** select "Redshift"
 
   1. For **Source**, specify the QuickSight CIDR range. The source address for QuickSight can be got from [QuickSight Regions, and IP Ranges](https://docs.aws.amazon.com/quicksight/latest/user/regions.html)
+    <details>
+    <summary><strong>Expand if you want detailed directions</strong></summary><p>
+  1. Navigate to [QuickSight Regions, and IP Ranges](https://docs.aws.amazon.com/quicksight/latest/user/regions.html)
 
-  <details>
-  <summary><strong>Expand if you want detailed directions</strong></summary><p>
+  1. Locate the section corresponding to the region your instance is running (E.g., _us_east_1_)
 
-    1. Navigate to [QuickSight Regions, and IP Ranges](https://docs.aws.amazon.com/quicksight/latest/user/regions.html)
-    1. Locate the section corresponding to the region your instance is running (E.g., _us_east_1_)
-    1. Find the **IP address range** and copy the corresponding value (E.g., _52.23.63.224/27_)
+  1. Find the **IP address range** and copy the corresponding value (E.g., _52.23.63.224/27_).
 
-    This is the QuickSight CIDR range needed to be configured in the Security Group setting.
+  This is the QuickSight CIDR range needed to be configured in the Security Group setting.
 
   </p></details><br/>
 
