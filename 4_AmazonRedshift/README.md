@@ -50,8 +50,10 @@ You have now successfully setup VPC endpoint for S3
   1. For **Type** select "Redshift"
 
   1. For **Source**, specify the QuickSight CIDR range. The source address for QuickSight can be got from [QuickSight Regions, and IP Ranges](https://docs.aws.amazon.com/quicksight/latest/user/regions.html)
-    <details>
-    <summary><strong>Expand if you want detailed directions</strong></summary><p>
+
+  <details>
+  <summary><strong>Expand if you want detailed directions</strong></summary><p>
+
   1. Navigate to [QuickSight Regions, and IP Ranges](https://docs.aws.amazon.com/quicksight/latest/user/regions.html)
 
   1. Locate the section corresponding to the region your instance is running (E.g., _us_east_1_)
@@ -144,23 +146,25 @@ You have now successfully setup VPC endpoint for S3
       ![Inspect Industry table in catalog](assets/SpectrumIndustryTableInCatalog.png)
 
    1.	Link external schema to glue data catalog
-      In Redshift Query Editor, run the following commands.
+
+   In Redshift Query Editor, run the following commands.
    ```
       create external schema spectrum_schema from data catalog
       database 'spectrumdb'
       iam_role  '<TeamRoleARN>'
       create external database if not exists;
    ```
-      <details>
-      <summary>Expand if you want detailed directions to get the <strong>TeamRoleARN</strong></summary><p>
+  <details>
+  <summary>Expand if you want detailed directions to get the <strong>TeamRoleARN</strong></summary><p>
 
-      1. Navigate to IAM [in the console](https://console.aws.amazon.com/iam) and click on **Roles** in the left panel, choose **TeamRole**, copy the **Role ARN** in the summary section, and copy the TeamRoleARN
-      ![IAM TeamRoleARN](assets/IAMTeamRoleARN.png)
+  1. Navigate to IAM [in the console](https://console.aws.amazon.com/iam) and click on **Roles** in the left panel, choose **TeamRole**, copy the **Role ARN** in the summary section, and copy the TeamRoleARN
+  ![IAM TeamRoleARN](assets/IAMTeamRoleARN.png)
 
-      </p></details>
+  </p></details>
 
-   1.	Illustrate Redshift Spectrum Join
-    In Redshift in Query Editor, run following Query. It joins “bbg” data in Redshift with “industry” data in S3.
+  3. Illustrate Redshift Spectrum Join
+
+  In Redshift in Query Editor, run following Query. It joins “bbg” data in Redshift with “industry” data in S3.
    ```
     select b.sector, count(a.ticker) as numInSector, sum(a.px_volume) as totVolbySector
     from bbg a, spectrum_schema.industry b
